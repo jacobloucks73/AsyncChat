@@ -4,6 +4,12 @@
 #include <boost/enable_shared_from_this.hpp>
 
 
+//https://www.boost.org/doc/libs/1_76_0/doc/html/boost_asio/overview.html               Sitemap docs
+//https://www.boost.org/doc/libs/1_76_0/doc/html/boost_asio/using.html                  macros  docs
+//https://www.boost.org/doc/libs/1_76_0/doc/html/boost_asio/tutorial/tutdaytime3.html   ayscnc  docs
+//
+
+
 class TCP{
 
 
