@@ -16,34 +16,29 @@ class TCP{
 
 	public:
 		bool TCPRun = 0;
-
+		TCP(boost::asio::io_context& io_context)
+			: io_context_(io_context),
+			acceptor_(io_context, tcp::endpoint(tcp::v4(), 13))
+		{
+			start_accept();
+		}
 
 
 	private:
 		const unsigned int PORT = 8080;
 		const unsigned int BUFFER_SIZE = 1024;
-		boost::asio::io_context io_context;
 
+		void start_accept()
+		{
+			tcp_connection::pointer new_connection =
+				tcp_connection::create(io_context_);
 
+			acceptor_.async_accept(new_connection->socket(),
+				boost::bind(&tcp_server::handle_accept, this, new_connection,
+					boost::asio::placeholders::error));
+		}
 
-	TCP()
-	{ 
 	
-		//
-		// Constructor  
-		// 
-
-	}
-
-
-	~TCP()
-	{ 
-
-		//
-		// Destructor 
-		// 	
-
-	}
 
 
 		//
