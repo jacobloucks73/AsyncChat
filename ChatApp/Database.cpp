@@ -1,4 +1,4 @@
-#include <string>
+/*#include <string>
 #include <sqlite3.h>
 class Database {
 
@@ -9,6 +9,7 @@ public:
 
 
 private:
+
 	const std::string DBADDRESS= "";    // PUT DATABASE ADDRESS HERE 
 	sqlite3* db;
 
@@ -16,7 +17,7 @@ private:
 
 	Database()
 	{
-		if (!db)
+		
 		//
 		// Constructor  
 		// 
@@ -34,7 +35,7 @@ private:
 
 	~Database()
 	{
-		sqlite3_close(db);
+		
 		//
 		// Destructor 
 		// 	
@@ -58,4 +59,4 @@ private:
 	// Get Previously Stored UserName
 	//
 
-}
+}*/
